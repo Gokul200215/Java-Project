@@ -47,7 +47,7 @@ public class StoreDetail {
 			break;
 		case 2:
 			if (availPhant > 0) {
-				System.out.println("MRP : 750\n10% Discount : 10%\nTotal Amount: 675");
+				System.out.println("MRP : 750\n10% Discount : 10%\nTotal Amount: 648");
 				int discount = (int) (720 * 0.9);
 				System.out.print("Payment : ");
 				int amt = sc.nextInt();
@@ -131,7 +131,7 @@ public class StoreDetail {
 			break;
 		case 6:
 			if (availSaree > 0) {
-				System.out.println("MRP : 1240\nDiscount : 10%\nTotal Amount: 1098");
+				System.out.println("MRP : 1240\nDiscount : 10%\nTotal Amount: 1116");
 				int discount = (int) (1240 * 0.9);
 				System.out.print("Payment : ");
 				int amt = sc.nextInt();
@@ -302,6 +302,26 @@ public class StoreDetail {
 			System.out.println("Invalid UserName");
 		}
 	}
+	
+	static void checkstlev(int chl) {
+		switch(chl) {
+		case 1:
+			System.out.println("\nCurrent Stock Level : ");
+			System.out.print(
+					"Shirt - " + availShirt + ",   Phant - " + availPhant + "   Traditional - " + availTraditional);
+			System.out.println(",   Top - " + availTop + ",   Skrit - " + availSkirt + ",   Saree - " + availSaree);
+			break;
+		case 2:
+			System.out.println("\nEnter your UserName:");
+			Scanner sc = new Scanner(System.in);
+			String Userna = sc.next();
+			User(Userna);
+			break;
+		default:
+			System.out.println("Invalid Option");
+			break;
+		}
+	}
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -346,13 +366,9 @@ public class StoreDetail {
 				returnItem(rId);
 				break;
 			case 4:
-				System.out.println("Current Stock Level : ");
-				System.err.print(
-						"Shirt - " + availShirt + ",   Phant - " + availPhant + "   Traditional - " + availTraditional);
-				System.err.println(",   Top - " + availTop + ",   Skrit - " + availSkirt + ",   Saree - " + availSaree);
-				System.out.println("Update Stock\nEnter your UserName:");
-				String Userna = sc.next();
-				User(Userna);
+				System.out.println("1.Check Stock Level    2.To Update Stock");
+				int chl=sc.nextInt();
+				checkstlev(chl);
 				break;
 			default:
 				System.out.println("Invalid Selection");
