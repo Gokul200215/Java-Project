@@ -227,6 +227,8 @@ public class StoreDetail {
 					} else {
 						System.out.println("Sorry, Time Out Can't be Returned");
 					}
+				} else {
+					System.out.println("Id Not found");
 				}
 			}
 		} else {
@@ -235,48 +237,48 @@ public class StoreDetail {
 	}
 
 	static void Stock(int st) {
-		Scanner sc=new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		switch (st) {
 		case 1:
 			System.out.println("Enter the No of Stocks to Add");
-			int sh=sc.nextInt();
-			availShirt+=sh;
-			availDress+=sh;
+			int sh = sc.nextInt();
+			availShirt += sh;
+			availDress += sh;
 			System.out.println("Shirt - Stock Updated Sucessfully");
 			break;
 		case 2:
 			System.out.println("Enter the No of Stocks to Add");
-			int ph=sc.nextInt();
-			availPhant+=ph;
-			availDress+=ph;
+			int ph = sc.nextInt();
+			availPhant += ph;
+			availDress += ph;
 			System.out.println("Phant - Stock Updated Sucessfully");
 			break;
 		case 3:
 			System.out.println("Enter the No of Stocks to Add");
-			int tr=sc.nextInt();
-			availTraditional+=tr;
-			availDress+=tr;
+			int tr = sc.nextInt();
+			availTraditional += tr;
+			availDress += tr;
 			System.out.println("Traditional - Stock Updated Sucessfully");
 			break;
 		case 4:
 			System.out.println("Enter the No of Stocks to Add");
-			int tp=sc.nextInt();
-			availTop+=tp;
-			availDress+=tp;
+			int tp = sc.nextInt();
+			availTop += tp;
+			availDress += tp;
 			System.out.println("Top - Stock Updated Sucessfully");
 			break;
 		case 5:
 			System.out.println("Enter the No of Stocks to Add");
-			int sk=sc.nextInt();
-			availSkirt+=sk;
-			availDress+=sk;
+			int sk = sc.nextInt();
+			availSkirt += sk;
+			availDress += sk;
 			System.out.println("Skirt - Stock Updated Sucessfully");
 			break;
 		case 6:
 			System.out.println("Enter the No of Stocks to Add");
-			int sa=sc.nextInt();
-			availSaree+=sa;
-			availDress+=sa;
+			int sa = sc.nextInt();
+			availSaree += sa;
+			availDress += sa;
 			System.out.println("Saree - Stock Updated Sucessfully");
 			break;
 		default:
@@ -302,9 +304,9 @@ public class StoreDetail {
 			System.out.println("Invalid UserName");
 		}
 	}
-	
+
 	static void checkstlev(int chl) {
-		switch(chl) {
+		switch (chl) {
 		case 1:
 			System.out.println("\nCurrent Stock Level : ");
 			System.out.print(
@@ -367,7 +369,7 @@ public class StoreDetail {
 				break;
 			case 4:
 				System.out.println("1.Check Stock Level    2.To Update Stock");
-				int chl=sc.nextInt();
+				int chl = sc.nextInt();
 				checkstlev(chl);
 				break;
 			default:
